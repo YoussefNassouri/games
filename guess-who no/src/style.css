@@ -1,0 +1,79 @@
+:root {
+  --bg-color:skyblue;
+  --text-color:black;
+}
+html {
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  font-family:sans-serif;
+  background:var(--bg-color);
+  color:var(--text-color);
+}
+body {
+  position:relative;
+  transform:scale(1.5);
+  letter-spacing:5px;
+}
+
+h1 {
+  margin:0;
+  line-height:100%;
+}
+
+div {
+  width:100px;
+  height:300px;
+  background: url('https://paulmccartney.files.wordpress.com/2009/11/beatlesclosedone.jpg');
+  display:inline-block;  
+  position:relative;
+  clip-path:polygon(-1% 37%, 101% 37%, 101% 45%, -1% 45%);
+  transition:.5s;
+  letter-spacing:0;
+}
+div:before {
+  width:90%;
+  color:var(--text-color);
+  background:var(--bg-color);
+  position:absolute;
+  left:5%;
+  bottom:5px;
+  padding:5px 0;
+}
+div:hover {
+  
+  clip-path:polygon(-1% 0%, 101% 0%, 101% 101%, -1% 101%);
+}
+
+/* george */
+div:nth-child(3) {
+  background-position:0 0;
+}
+div:nth-child(3):before {
+  content:'George';
+}
+
+/* paul */
+div:nth-child(4) {
+  background-position:33% 0;
+}
+div:nth-child(4):before {
+  content:'Paul';  
+}
+
+/* ringo */
+div:nth-child(5) {
+  background-position:67% 0;
+}
+div:nth-child(5):before {
+  content:'Ringo';  
+}
+
+/* john */
+div:nth-child(6) {
+  background-position:100% 0;
+}
+div:nth-child(6):before {
+  content:'John';  
+}
